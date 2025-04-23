@@ -1,3 +1,7 @@
+import Controllers.BookController;
+import Models.Book;
+import Views.ViewConsole;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -34,5 +38,16 @@ public class App {
                 new Book("The Elements of Statistical Learning", 2001)
         };
 
+        ViewConsole vC = new ViewConsole();
+        BookController bC = new BookController();
+
+        vC.showBookArray(books);
+        vC.showMessage("Libro");
+
+        bC.sortByBubble(books);
+        bC.searchByBinari(books, "Clean Code");
+
+        
+                
     }
 }
